@@ -1,0 +1,12 @@
+local part = script.Parent
+local click = part.ClickDetector
+click.MouseClick:Connect(function(player)
+local playerStats = player:FindFirstChild("leaderstats")
+local playerUang = playerStats:FindFirstChild("Uang")
+
+if playerUang.Value >= 9000 then
+	playerUang.Value = playerUang.Value - 9000
+	local Tembok = workspace:FindFirstChild("Barrier2")
+	Tembok:Destroy()
+end
+end)
