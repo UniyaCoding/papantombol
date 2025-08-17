@@ -1,12 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kode Roblox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    pre {
+      background: #1e1e1e;
+      color: #dcdcdc;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+  <h2>Script Roblox (Lua)</h2>
+  <pre><code>
 local part = script.Parent
 local click = part.ClickDetector
 click.MouseClick:Connect(function(player)
-local playerStats = player:FindFirstChild("leaderstats")
-local playerUang = playerStats:FindFirstChild("Uang")
+    local playerStats = player:FindFirstChild("leaderstats")
+    local playerUang = playerStats:FindFirstChild("Uang")
 
-if playerUang.Value >= 9000 then
-	playerUang.Value = playerUang.Value - 9000
-	local Tembok = workspace:FindFirstChild("Barrier2")
-	Tembok:Destroy()
-end
+    if playerUang.Value >= 9000 then
+        playerUang.Value = playerUang.Value - 9000
+        local Tembok = workspace:FindFirstChild("Barrier2")
+        Tembok:Destroy()
+    end
 end)
+  </code></pre>
+</body>
+</html>
